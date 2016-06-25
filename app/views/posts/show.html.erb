@@ -1,2 +1,13 @@
-<h1>Posts#show</h1>
-<p>Find me in app/views/posts/show.html.erb</p>
+<h1>Post View</h1>
+<div class="left-container container">
+  <%= render 'posts/each' %>
+  <div class="reply-container">
+    <h1>Replies</h1>
+    <% @post.replies.each do |reply| %>
+      <%= render partial: 'replies/show', locals: {reply: reply} %>
+    <% end %>
+  </div>
+  <div class="button-container">
+    <%= link_to 'Reply', "/posts/#{@post.id}/reply", :class => 'btn btn-primary' %>
+  </div>
+</div>

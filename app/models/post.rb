@@ -1,5 +1,6 @@
 class Post < ApplicationRecord
   belongs_to :user
+  has_many :replies
   # title :string
   # message :string
   def readable_time

@@ -306,12 +306,21 @@ h1, h2, p, a, span{
       height: 80px;
       padding-right: 20px;
     }
+    .profile-menu li{
+      height: 100%;
+    }
+    .profile-name{
+      padding-right: 20px;
+    }
+    .profile-name .icon{
+      padding-right: 10px;
+    }
       .profile-menu p {
         font-size: 17px;
         display: inline-block;
-        line-height: 76px;
         margin: 0;
         padding-right: 10px;
+        line-height: 76px;
       }
         .profile-menu a {
           padding-left: 5px;
@@ -327,6 +336,9 @@ h1, h2, p, a, span{
   .container {
     float: left;
     width: 300px;
+  }
+  .reply-container{
+    padding-left: 40px;
   }
     .block {
       margin-bottom: 25px;
@@ -523,8 +535,6 @@ h1, h2, p, a, span{
           float: right;
           line-height: 18px;
           width: 23px;          
-          border: 2px solid;
-          border-radius: 100%;
           font-size: 18px;
           text-align: center;
           margin: 10px;         
@@ -534,8 +544,21 @@ h1, h2, p, a, span{
             border-color: #e64c65;
           }
         .user-name {
-          margin: 25px 0 16px;
           text-align: center;
+        }
+        .user-name.reply{
+          color: white;
+          text-align: right;
+          margin-right: 10px;
+          line-height: 40px;
+        }
+        .reply{
+           
+        }
+        .profile-description .reply{
+          line-height: 40px;
+          vertical-align: middle;       
+          margin: 0;
         }
         .user-name.titular{
           background: #35aadc;

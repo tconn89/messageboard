@@ -6,17 +6,24 @@
             <header class="block">
                 <ul class="header-menu horizontal-list">
                     <li>
+                    <%= link_to(root_path, :class => 'header-menu-tab') do%>
+                        <span class="icon entypo-paper-plane scnd-font-color"></span>Message Board
+                    <% end %>
+                    </li>
+                    
+                </ul>
+                <ul class="profile-menu horizontal-list">
+                    <li>
+                    <p class="profile-name">
+                       <span class="icon fontawesome-user"></span>
+                       <%= current_user.email%> <a href="#"></a></p>
+                    </li>
+                    <li>
                     <%= link_to(destroy_user_session_path, :class => 'header-menu-tab', :method => :delete) do%>
                         <span class="icon entypo-cog scnd-font-color"></span>Logout
                     <% end %>
                     </li>
                 </ul>
-                <div class="profile-menu">
-                    <p> <%= current_user.email%> <a href="#"><span class="entypo-down-open scnd-font-color"></span></a></p>
-                    <div class="profile-picture small-profile-picture">
-                        <span class="inner-circle icon fontawesome-user"></span>
-                    </div>
-                </div>
             </header>
 
             <!-- LEFT-CONTAINER -->
@@ -123,7 +130,7 @@
             <div class="middle-container container">
                 <% @posts.each do |post| %>
                 <div class="block"> <!-- PROFILE (MIDDLE-CONTAINER) -->
-                    <a class="add-button" href="#28"><span class="icon entypo-plus scnd-font-color"></span></a>
+                    <a class="add-button" href= <%="/posts/#{post.id}/show"%>><span class="icon fontawesome-reply scnd-font-color"></span></a>
                     <h2 class="user-name titular"><%= post.user.email %></h2>
                     <div class="profile-description">
                         <p class="scnd-font-color"><%= post.message %></p>
@@ -143,7 +150,7 @@
                     <h2 class="titular">POST A MESSAGE</h2>
                     <%= form_for :post, :url => '/posts' do |f| %>
                       <%= f.text_field :title, :id => 'title_input' %><br />
-                      <%= f.text_area :message, :id => 'message_input', :placeholder => 'Whats on your mind?' %><br />
+                      <%= f.text_area :message, :id => 'message_input', :placeholder => 'Whats on your mind?', :required => true %><br />
                       <%= f.submit 'POST', :class => 'subscribe button' %>
                     <% end %>
                 </div>
