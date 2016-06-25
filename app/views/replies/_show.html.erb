@@ -1,7 +1,9 @@
-<div class="block">
-  <a class="add-button" href="#28"><span class="icon entypo-plus scnd-font-color"></span></a>
-  <div class="profile-description">
+<div class="reply block">
+  <div class="reply-content">
     <p class="scnd-font-color reply"><%= reply.message %></p>
   </div>
-  <p class="user-name reply">-- <%= "#{reply.user.email} on #{reply.created_at.to_s(:time)}" %></p>
+  <div class="user-name">
+    <p class="reply">-- <%= "#{reply.user.email}" %></p>
+    <p class="reply">on <%="#{reply.readable_time}" %></p>
+  </div>
 </div>

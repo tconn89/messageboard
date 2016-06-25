@@ -9,9 +9,35 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <div class="main-container">
 
-    <%= yield %>
+      <!-- HEADER -->
+      <header class="block">
+        <ul class="header-menu horizontal-list">
+          <li>
+          <%= link_to(root_path, :class => 'header-menu-tab') do%>
+              <span class="icon entypo-paper-plane scnd-font-color"></span>Message Board
+          <% end %>
+          </li>
+            
+        </ul>
+        <ul class="profile-menu horizontal-list">
+          <li>
+          <p class="profile-name">
+             <span class="icon fontawesome-user"></span>
+             <%= current_user.email%> <a href="#"></a></p>
+          </li>
+          <li>
+          <%= link_to(destroy_user_session_path, :class => 'header-menu-tab', :method => :delete) do%>
+              <span class="icon entypo-cog scnd-font-color"></span>Logout
+          <% end %>
+          </li>
+        </ul>
+      </header>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+
+      <%= yield %>
+    </div> <!-- end main-container -->
   </body>
 </html>

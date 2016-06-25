@@ -96,10 +96,9 @@ h1, h2, p, a, span{
 .input-container {
   position: relative;
 }
-  textarea#message_input{
+  textarea.message_input{
     width: 230px;
     height: 140px;
-    margin-left: 20px;
     margin-bottom: 20px;
     background: #50597b;
     color: #fff;
@@ -109,9 +108,10 @@ h1, h2, p, a, span{
   }
   #title_input{
     padding-left: 10px;
+    margin-left: 0;
   }
   input[type=text]{
-    width: 220px;
+    width: 230px;
     height: 50px;
     margin-left: 20px;
     margin-bottom: 20px;
@@ -241,8 +241,8 @@ h1, h2, p, a, span{
 .main-container {
   font-family: 'Ubuntu', sans-serif;
   width: 950px;
-  height: 1025px;
   margin: 6em auto;
+  margin-top: 0;
 } 
   /*********************************************** HEADER ***********************************************/
   header {
@@ -327,7 +327,6 @@ h1, h2, p, a, span{
     width: 300px;
   }
   .reply-container{
-    padding-left: 40px;
   }
     .block {
       margin-bottom: 25px;
@@ -337,7 +336,7 @@ h1, h2, p, a, span{
     /******************************************** LEFT CONTAINER *****************************************/
     .left-container {}
       .menu-box {
-        height: 360px;
+        height: 300px;
       }
         .menu-box .titular {
           background: #11a8ab;
@@ -536,22 +535,22 @@ h1, h2, p, a, span{
           font-weight: bold;
           text-transform: uppercase;
         }
-        .user-name.reply{
+        .user-name .reply{
           color: white;
           text-align: right;
           margin-right: 10px;
-          line-height: 40px;
+          line-height: 10px;
+          font-size: 10px;
         }
         .user-sign p{
           font-size: 10px;
         }
-        .reply{
-           
+        .reply.block{
+          padding:10px; 
         }
-        .profile-description .reply{
-          line-height: 40px;
+        .reply-content .reply{
           vertical-align: middle;       
-          margin: 0;
+          margin: 10px;
         }
         .title.titular{
           background: #35aadc;
@@ -655,6 +654,7 @@ h1, h2, p, a, span{
     .right-container {}
       .post-message {
         height: 430px;
+        padding-left: 20px;
       }
       .post-read{
         height: 200px;

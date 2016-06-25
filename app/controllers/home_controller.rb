@@ -13,6 +13,6 @@ class HomeController < ApplicationController
 
   def dashboard
     @load_icon = true
-    @posts = Post.all    
+    @posts = Post.order('posts.created_at DESC')    
   end
 end

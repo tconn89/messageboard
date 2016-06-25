@@ -16,6 +16,9 @@ class PostsController < ApplicationController
   end
 
   def reply
+    @load_icon = false
     @post = Post.find(params[:id])
+    @reply_area = true
+    render '/posts/show'
   end
 end
