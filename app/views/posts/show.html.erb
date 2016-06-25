@@ -1,13 +1,13 @@
-<h1>Post View</h1>
 <div class="left-container container">
-  <%= render 'posts/each' %>
+  <h1>Post View</h1>
+  <%= render partial: 'posts/each', locals: {post: @post}%>
   <div class="reply-container">
     <h1>Replies</h1>
     <% @post.replies.each do |reply| %>
       <%= render partial: 'replies/show', locals: {reply: reply} %>
     <% end %>
-  </div>
   <div class="button-container">
     <%= link_to 'Reply', "/posts/#{@post.id}/reply", :class => 'btn btn-primary' %>
+  </div>
   </div>
 </div>

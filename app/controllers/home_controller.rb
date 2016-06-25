@@ -12,6 +12,7 @@ class HomeController < ApplicationController
   end
 
   def dashboard
+    @load_icon = true
     @posts = Post.all    
   end
 end

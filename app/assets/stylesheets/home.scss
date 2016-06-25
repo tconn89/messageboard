@@ -105,9 +105,10 @@ h1, h2, p, a, span{
     color: #fff;
     border: solid 1px #1f253d;
     border-radius: 5px;   
+    padding-left: 10px;
   }
   #title_input{
-    display: none;
+    padding-left: 10px;
   }
   input[type=text]{
     width: 220px;
@@ -120,18 +121,6 @@ h1, h2, p, a, span{
     border: solid 1px #1f253d;
     border-radius: 5px;   
   }
-    input[type=text]::-webkit-input-placeholder { /* WebKit browsers */
-        color: #fff;        
-      }
-    input[type=text]:-moz-input-placeholder { /* Mozilla Firefox 4 to 18 */
-        color: #fff;     
-      }
-    input[type=text]::-moz-input-placeholder { /* Mozilla Firefox 19+ */
-        color: #fff;
-      }
-    input[type=text]:-ms-input-placeholder { /* Internet Explorer 10+ */
-        color: #fff;      
-      }
       input[type=text]:focus {
         outline: none; /* removes the default orange border when focus */
         border: 1px solid #11a8ab;
@@ -543,14 +532,18 @@ h1, h2, p, a, span{
             color: #e64c65;
             border-color: #e64c65;
           }
-        .user-name {
-          text-align: center;
+        .title{
+          font-weight: bold;
+          text-transform: uppercase;
         }
         .user-name.reply{
           color: white;
           text-align: right;
           margin-right: 10px;
           line-height: 40px;
+        }
+        .user-sign p{
+          font-size: 10px;
         }
         .reply{
            
@@ -560,7 +553,7 @@ h1, h2, p, a, span{
           vertical-align: middle;       
           margin: 0;
         }
-        .user-name.titular{
+        .title.titular{
           background: #35aadc;
         }
         .profile-description {

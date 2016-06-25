@@ -1,11 +1,14 @@
 
 <div class="block">
-  <a class="add-button" href="#28"><span class="icon entypo-plus scnd-font-color"></span></a>
-  <h2 class="user-name titular"><%= @post.user.email %></h2>
+  <%= reply_helper(post) %>
+  <h2 class="title titular"><%= post.title %></h2>
   <div class="profile-description">
-    <p class="scnd-font-color"><%= @post.message %></p>
+    <div class="user-sign">
+      <p> posted by <%="#{post.user.email}"%></p>
+    </div>
+    <p class="scnd-font-color"><%= post.message %></p>
   </div>
   <div class="timestamp">
-    <p class="center-date"><%= @post.readable_time %></p>
+    <p class="center-date"><%= post.readable_time %></p>
   </div>
 </div>

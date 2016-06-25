@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = current_user.posts.new(:title => '', :message => params[:post][:message])
+    @post = current_user.posts.new(:title => params[:post][:title], :message => params[:post][:message])
     unless @post.save
       flash[:error] = @post.errors.full_messages
     end
@@ -11,6 +11,7 @@ class PostsController < ApplicationController
   end
 
   def show
+    @load_icon = false
     @post = Post.find(params[:id])
   end
 
